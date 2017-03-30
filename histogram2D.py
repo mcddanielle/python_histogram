@@ -76,7 +76,8 @@ if __name__ == "__main__":
 
     weights=np.ones_like(speed)/len(speed)
 
-    (H,xedges,yedges,img) = ax4.hist2d(vx,vy,bins=40,norm=clr.LogNorm(),weights=weights)
+    (H,xedges,yedges,img) = ax4.hist2d(vx,vy,bins=40,norm=clr.LogNorm(),
+                                       weights=weights)
     ax4.xaxis.set_major_locator(MaxNLocator(4))
     ax4.yaxis.set_major_locator(MaxNLocator(5))
 
@@ -132,4 +133,4 @@ if __name__ == "__main__":
 
     fig.tight_layout()
 
-    fig.savefig("aack.eps")
+    fig.savefig("histogram.png")
